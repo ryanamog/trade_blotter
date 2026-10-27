@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  background-color: #05080b;
+  color: #cfd8dc;
+  font-family: 'Inter', sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.brand-logo {
+  width: 40px;
+  height: 40px;
+  font-size: 0.9rem;
+}
+
+.letter-spacing-1 {
+  letter-spacing: 0.08em;
+}
+
+.tracking-widest {
+  letter-spacing: 0.12em;
+}
+
+.text-cyan {
+  color: #00e699 !important;
+}
+
+.text-cyan-light {
+  color: #92b6c7;
+}
+
+.live-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background-color: #00e699;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #00e699;
+
+  /* Link the animation here */
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+/* Define the pulsing keyframes */
+@keyframes pulse-glow {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 230, 153, 0.7);
+  }
+  
+  70% {
+    transform: scale(1);
+    /* Creates an expanding, fading ring outward */
+    box-shadow: 0 0 0 8px rgba(0, 230, 153, 0);
+  }
+  
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 230, 153, 0);
+  }
+}
+
+.blotter-card {
+  background-color: #0a0e14;
+  border-color: #141c26 !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+.header-labels th {
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  padding: 8px 10px;
+  background: transparent !important;
+}
+
+.filter-row td {
+  padding: 4px 6px 12px 6px;
+  background: transparent !important;
+}
+
+.blotter-input,
+.blotter-select {
+  background-color: #05080c !important;
+  border: 1px solid #1c2733 !important;
+  color: #8fa0b3 !important;
+  font-size: 0.72rem;
+  font-family: 'JetBrains Mono', monospace;
+  padding: 2px 6px;
+  height: 38px;
+  border-radius: 3px;
+}
+
+.blotter-input:focus,
+.blotter-select:focus {
+  border-color: #00e699 !important;
+  box-shadow: none !important;
+}
+
+.blotter-row td {
+  background: transparent !important;
+  padding: 10px 10px;
+  border-top: 1px solid #10161f;
+  font-size: 0.78rem;
+}
+
+.blotter-row:hover td {
+  background-color: #0f151e !important;
+}
+
+.badge-buy {
+  color: #00e699;
+  font-weight: 600;
+}
+
+.badge-sell {
+  color: #ff5353;
+  font-weight: 600;
+}
+
+.status-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.status-tag.filled {
+  color: #00e699;
+}
+
+.status-tag.pending {
+  color: #38bdf8;
+}
+
+.status-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+.blotter-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.blotter-scroll::-webkit-scrollbar-track {
+  background: #05080c;
+}
+
+.blotter-scroll::-webkit-scrollbar-thumb {
+  background: #233140;
+  border-radius: 3px;
+}
+
+/* Smoothly fade the background color of the sorted column */
+.table th, .table td {
+  transition: background-color 0.8s ease, opacity 0.8s ease;
+}
+
+/* Optional: Smoothly fade in rows when the table contents change */
+.table tbody tr {
+  transition: all 0.8s ease-in-out;
+}
+
+.status {
+    font-size: 10px;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-family: IBM Plex Sans, ui-sans-serif, system-ui, sans-serif;
+    letter-spacing: 0.15em;
+}
+
+.status.active {
+    color: #00d084;
+    background: rgba(0, 208, 132, .15);
+    border: 1px solid rgba(0, 208, 132, .3);
+}
+
+.status.amended {
+    color: #ff9800;
+    background: rgba(255, 152, 0, .15);
+    border: 1px solid rgba(255, 152, 0, .3);
+}
+
+.status.cancelled {
+    color: #f2002c;
+    background: rgba(255, 77, 109, .15);
+    border: 1px solid rgba(255, 0, 47, 0.3);
+}
+
+.side {
+    font-size: 10px;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-family: IBM Plex Sans, ui-sans-serif, system-ui, sans-serif;
+    letter-spacing: 0.15em;
+}
+
+.side.buy {
+    color: #00d084;
+    background: rgba(0, 208, 132, .15);
+    border: 1px solid rgba(0, 208, 132, .3);
+}
+
+.side.sell {
+    color: #f2002c;
+    background: rgba(255, 77, 109, .15);
+    border: 1px solid rgba(255, 0, 47, 0.3);
+}
+
+/* Append directly to your existing styles */
+.blotter-footer {
+  background-color: #05080c;
+  border-top: 1px solid #141c26;
+  font-family: 'Inter', sans-serif;
+  color: #8fa0b3;
+  font-size: 0.72rem;
+}
+
+.pagination-btn {
+  background-color: #0a0e14;
+  border: 1px solid #1c2733;
+  color: #cfd8dc;
+  font-size: 0.72rem;
+  padding: 4px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  border-color: #00e699;
+  color: #00e699;
+  background-color: #0f151e;
+}
+
+.pagination-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.page-indicator {
+  font-family: 'JetBrains Mono', monospace;
+  color: #8fa0b3;
+}
+
+.page-indicator strong {
+  color: #00e699;
+}
+
+/* ==========================================================================
+   Full-Height Right-Sliding Modal Drawer Styles
+   ========================================================================== */
+
+/* Structure class for full height and triggering animation */
+.modal-drawer {
+  height: 100vh !important;
+  animation: slideInRight 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Keyframes to smoothly animate panel from the right edge */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0.8;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.btn-sale{
+    background-color:#00d084 !important;
+    color:#000 !important;
+
+    border:none !important;
+    border-radius:12px;
+
+    padding:8px 18px;
+    font-weight:600;
+
+    font-size: 14px;
+    transition:all .25s ease;
+}
+
+.btn-sale:hover,
+.btn-sale:focus,
+.btn-sale:active,
+.btn-sale.show{
+    background-color:#00d084 !important;
+    color:#000 !important;
+    border:none !important;
+
+    box-shadow:
+        0 0 0 1px rgba(98, 215, 100, 0.15),
+        0 8px 20px rgba(98, 215, 102, 0.1),
+        0 0 30px rgba(102, 215, 98, 0.15) !important;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translate(-50%, -100%); /* Off-screen up top */
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0); /* Resting center coordinate */
+    opacity: 1;
+  }
+}
+
+.submit-btn {
+  background-color: #0a0e14;
+  border: 1px solid #1c2733;
+  color: #cfd8dc;
+  font-size: 0.72rem;
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  border-color: #00e699;
+  color: #000906 !important;
+  background-color:#00d084 !important;
+  box-shadow:
+      0 0 0 1px rgba(98, 215, 100, 0.15),
+      0 8px 20px rgba(98, 215, 102, 0.1),
+      0 0 30px rgba(102, 215, 98, 0.15) !important;
+}
+
+.cancel-btn {
+  background-color: #0a0e14;
+  border: 1px solid #1c2733;
+  color: #cfd8dc;
+  font-size: 0.72rem;
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancel-btn:hover:not(:disabled) {
+  border-color: #d40202;
+  color: #090000 !important;
+  background-color:#d40202 !important;
+  box-shadow:
+      0 0 0 1px rgba(215, 98, 98, 0.15),
+      0 8px 20px rgba(215, 98, 98, 0.1),
+      0 0 30px rgba(215, 98, 98, 0.15) !important;
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  color: #ff0000;
+  font-size: 0.72rem;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+@keyframes formFadeIn {
+  from {
+    transform: translateY(10px); /* Subtle upward slide */
+    opacity: 0;                  /* Soft entry fade */
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.loading-container {
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.dot {
+  animation: blink 1.4s infinite both;
+}
+
+.dot:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.2;
+    transform: translateY(0);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(-4px);
+  }
+  40% {
+    opacity: 0.2;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0.2;
+    transform: translateY(0);
+  }
+}
